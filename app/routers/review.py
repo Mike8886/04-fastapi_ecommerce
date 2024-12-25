@@ -128,8 +128,8 @@ async def delete_reviews(
         )
         await db.commit()
         return {
-            'status_code': status.HTTP_201_CREATED,
-            'transaction': 'Review create Successful'
+            'status_code': status.HTTP_200_OK,
+            'transaction': 'Review delete Successful'
         }
     else:
         raise HTTPException(
